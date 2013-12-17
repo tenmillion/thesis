@@ -1,0 +1,207 @@
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.sjis) (TeX Live 2013/W32TeX) (format=platex 2013.5.29)  18 DEC 2013 03:50
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**mthesis_yoriko.tex
+(./mthesis_yoriko.tex
+pLaTeX2e <2006/11/10>+0 (based on LaTeX2e <2011/06/27> patch level 0)
+Babel <3.9f> and hyphenation patterns for 77 languages loaded.
+(c:/w32tex/share/texmf-dist/tex/platex/base/pl209.def
+Entering pLaTeX 2.09 compatibility mode.
+(c:/w32tex/share/texmf-dist/tex/latex/base/latex209.def
+File: latex209.def 1998/05/13 v0.52 Standard LaTeX file
+
+
+          Entering LaTeX 2.09 COMPATIBILITY MODE
+ *************************************************************
+    !!WARNING!!    !!WARNING!!    !!WARNING!!    !!WARNING!!   
+ 
+ This mode attempts to provide an emulation of the LaTeX 2.09
+ author environment so that OLD documents can be successfully
+ processed. It should NOT be used for NEW documents!
+ 
+ New documents should use Standard LaTeX conventions and start
+ with the \documentclass command.
+ 
+ Compatibility mode is UNLIKELY TO WORK with LaTeX 2.09 style
+ files that change any internal macros, especially not with
+ those that change the FONT SELECTION or OUTPUT ROUTINES.
+ 
+ Therefore such style files MUST BE UPDATED to use
+          Current Standard LaTeX: LaTeX2e.
+ If you suspect that you may be using such a style file, which
+ is probably very, very old by now, then you should attempt to
+ get it updated by sending a copy of this error message to the
+ author of that file.
+ *************************************************************
+
+\footheight=\dimen118
+\@maxsep=\dimen119
+\@dblmaxsep=\dimen120
+\@cla=\count81
+\@clb=\count82
+\mscount=\count83
+(c:/w32tex/share/texmf-dist/tex/latex/base/tracefnt.sty
+Package: tracefnt 1997/05/29 v3.0j Standard LaTeX package (font tracing)
+\tracingfonts=\count84
+LaTeX Info: Redefining \selectfont on input line 101.
+)
+\symbold=\mathgroup4
+\symsans=\mathgroup5
+\symtypewriter=\mathgroup6
+\symitalic=\mathgroup7
+\symsmallcaps=\mathgroup8
+\symslanted=\mathgroup9
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 293.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 294.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 295.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 301.
+LaTeX Info: Redefining \em on input line 311.
+
+(c:/w32tex/share/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 375.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 377.
+LaTeX Font Info:    Redeclaring math delimiter \bracevert on input line 379.
+)
+(c:/w32tex/share/texmf-dist/tex/platex/base/ptrace.sty
+LaTeX Info: Redefining \selectfont on input line 40.
+\adjust@box=\box41
+\adjust@dimen=\dimen121
+)
+\symmincho=\mathgroup11
+\symgothic=\mathgroup12
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 59.
+LaTeX Info: Redefining \bf on input line 73.
+LaTeX Info: Redefining \rm on input line 80.
+LaTeX Info: Redefining \sf on input line 81.
+LaTeX Info: Redefining \sl on input line 82.
+LaTeX Info: Redefining \sc on input line 83.
+LaTeX Info: Redefining \it on input line 84.
+LaTeX Info: Redefining \tt on input line 85.
+LaTeX Info: Redefining \em on input line 86.
+)
+(c:/w32tex/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(c:/w32tex/share/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count85
+\c@section=\count86
+\c@subsection=\count87
+\c@subsubsection=\count88
+\c@paragraph=\count89
+\c@subparagraph=\count90
+\c@figure=\count91
+\c@table=\count92
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+Compatibility mode: definition of \rm ignored.
+Compatibility mode: definition of \sf ignored.
+Compatibility mode: definition of \tt ignored.
+Compatibility mode: definition of \bf ignored.
+Compatibility mode: definition of \it ignored.
+Compatibility mode: definition of \sl ignored.
+Compatibility mode: definition of \sc ignored.
+LaTeX Info: Redefining \cal on input line 506.
+LaTeX Info: Redefining \mit on input line 507.
+\bibindent=\dimen122
+) (./naist-mthesis.sty
+Master's Thesis / Master's Report Style for Graduate School of Inforamtion Scie
+nce, NAIST
+(./naist-mcommon.sty
+\nendo=\count93
+\curmin=\count94
+\hour=\count95
+\onehour=\count96
+\curhour=\count97
+)) (./mthesis_yoriko.aux)
+\openout1 = `mthesis_yoriko.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 193.
+LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 197.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 197.
+ [1
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 198.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 198.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 198.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 198.
+
+(c:/w32tex/share/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) [2]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 199.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 199.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 199.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 199.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 199.
+ [1] [2]
+(./mthesis_yoriko.toc [3])
+\tf@toc=\write3
+\openout3 = `mthesis_yoriko.toc'.
+
+ [4] (./mthesis_yoriko.lof)
+\tf@lof=\write4
+\openout4 = `mthesis_yoriko.lof'.
+
+ (./mthesis_yoriko.lot)
+\tf@lot=\write5
+\openout5 = `mthesis_yoriko.lot'.
+
+
+[5]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 220.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 220.
+
+
+LaTeX Warning: Citation `MWS93' on page 1 undefined on input line 231.
+
+[1] [2] [3] [4] [5] [6] [7] [8] (./mthesis_yoriko.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 624 strings out of 494011
+ 7251 string characters out of 6156422
+ 66625 words of memory out of 5000000
+ 4088 multiletter control sequences out of 15000+600000
+ 27933 words of font info for 106 fonts, out of 8000000 for 9000
+ 745 hyphenation exceptions out of 8191
+ 23i,8n,19p,251b,333s stack positions out of 5000i,500n,10000p,500000b,80000s
+
+Output written on mthesis_yoriko.dvi (15 pages, 14560 bytes).

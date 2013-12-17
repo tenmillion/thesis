@@ -1,0 +1,373 @@
+%
+% mthesis.tex サンプル
+%
+%\documentstyle[naist-jmthesis,12pt]{jarticle}   % 日本語(Japanese thesis)
+\documentstyle[naist-mthesis,12pt]{article}    % 英語(English thesis)
+%
+% ページスタイルの指定
+%
+\pagestyle{final}       % 清書
+%\pagestyle{draft}      % 下書き
+%
+% 使用言語の指定
+%
+%\lang{Japanese} % 日本語
+\lang{English} % 英語
+%
+% 学生番号
+%
+\studentnumber{1251114}
+%
+% 修士論文 か 課題研究 かの選択
+%
+\doctitle{\mastersthesis}       % 修士論文
+%\doctitle{\mastersreport}      % 課題研究
+%
+% 取得予定の修士号は 修士(工学) か 修士(理学) か ？
+%
+\major{\engineering}    % 工学
+%\major{\science}       % 理学
+%
+% 日本語題目 (in LaTeX)
+%
+\title{Hodgkin-Huxley型神経細胞ネットワークにおける\\
+てんかん様同期活動の温度依存性}
+%
+% 日本語題目 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は指定する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\ptitle{Hodgkin-Huxley型神経細胞ネットワークにおける\\
+てんかん様同期活動の温度依存性}
+%
+% 英語題目 (in LaTeX)
+%
+\etitle{Temperature Dependency of Synchronous Epileptiform Activity in a \\
+Hodgkin-Huxley Neural Network}
+%
+% 英語題目 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は指定する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\eptitle{Temperature Dependency of Synchronous Epileptiform Activity in a \\
+Hodgkin-Huxley Neural Network}
+%
+% 日本語氏名 (in LaTeX)
+%   （姓と名の間に空白を入れて下さい）
+%
+\author{山村 頼子}
+%
+% 日本語氏名 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は指定する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\pauthor{}
+%
+% 欧文氏名 (in LaTeX)
+%   （first name, last name の順に記入し、先頭文字のみを大文字にする。）
+%
+\eauthor{Yoriko Yamamura}
+% 別の例: \eauthor{Kurt G\"{o}del}
+%
+%
+% 欧文氏名 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は指定する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\epauthor{}
+% 別の例: \peauthor{Kurt Goedel}
+%
+%
+% 論文提出年月日
+%
+\syear{2014}
+\smonth{2}
+\sday{6}
+%
+% 専攻の選択
+%
+%\department{\infproc}  % 情報処理学
+%\department{\infsys}    % 情報システム学
+%\department{\bioinf}   % 情報生命科学
+\department{\infsci}    % 情報科学
+%
+%
+% 審査委員（日本語）
+%   （姓と名、名と称号の間に空白を入れて下さい）
+%
+%５人以上の場合，５人目以降は\addcmembers を使って宣言する。
+%最大で合わせて８人まで宣言可能。
+%主指導教員、副指導教員を明記する。両指導教員以外は委員。
+%学外審査委員は、大学名を明記する
+%
+% ４人の場合
+\cmembers{池田 和司 教授}{（主指導教員）}
+         {笠原　正治 教授}{（副指導教員）}
+         {久保　孝富 助教授}{（副指導教員）}
+         {川人　光男 教授}{（副指導教員）}
+
+%
+% 審査委員（英語）
+%     （first name, last name の順に記入し、先頭文字のみを大文字にする。
+%       first name と last name の間に空白、
+%       last name と 称号の間にカンマと空白を入れて下さい。）
+%
+% ５人以上の場合，５人目以降は\eaddcmembers を使って宣言する
+% Supervisor, Co-supervisor, and Member must be specified.
+% ４人の場合
+\ecmembers{Professor Kazushi Ikeda}{(Supervisor)}
+          {Professor Shoji Kasahara}{(Co-supervisor)}
+          {Assistant Professor Takatomi Kubo}{(Co-supervisor)}
+          {Professor Mitsuo Kawato}{(Co-supervisor)}
+%
+%
+%
+% キーワード５～６個 (in LaTeX)
+%
+\keywords{てんかん, 温度, Hodgkin-Huxley, シミュレーション, 平均場近似, 同期}
+%
+% キーワード５～６個 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は記入する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\pkeywords{}
+%
+% 5 or 6 Keywords (in LaTeX)
+%
+\ekeywords{epilepsy, temperature, Hodgkin-Huxley, simulation, mean-field approximation, synchronization}
+%
+% 5 or 6 Keywords (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は記入する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\epkeywords{}
+%
+% 内容梗概 (in LaTeX)
+%
+%   注: 行の先頭が\\で始まらないようにすること。
+%
+\abstract{
+てんかん焦点の冷却により，てんかん発作が抑制可能であることは，以前より実験的に知られていた．しかし，その分子的機序や効果ー温度 間の関係には不明な点が
+多く残されていた．本研究ではまず，Hodgkin-Huxley型神経細胞ネットワークを用いたシミュレーションによって，冷却による 膜イオンチャネル
+開閉率の変化のみでもてんかん様同期活動が停止し得ることを示した．次に，このHodgkin-Huxley型神経細胞ネットワークにおけるてんかん様活動の温度に対する振る舞いを解明するため，平均場近似による解析を行った．
+}
+%
+% 内容梗概 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は記入する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%       改行する箇所には空白行を入れる。
+%       行の先頭が\\で始まらないようにすること。
+%
+\pabstract{
+}
+%
+% Abstract (in LaTeX)
+%
+%   注: 行の先頭が\\で始まらないようにすること。
+%
+\eabstract{
+This is a sample abstract. This is a sample abstract. 
+This is a sample abstract. This is a sample abstract. 
+This is a sample abstract. This is a sample abstract. 
+This is a sample abstract. This is a sample abstract. 
+This is a sample abstract. This is a sample abstract. 
+}
+%
+% Abstract (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は記入する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%       改行する箇所には空白行を入れる。
+%       行の先頭が\\で始まらないようにすること。
+%
+\epabstract{
+}
+%%%%%%%%%%%%%%%%%%%%%%%%% document starts here %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%
+% 表紙 および アブストラクト
+%
+\titlepage
+\cmemberspage
+\firstabstract
+\secondabstract
+%
+% 目次
+%
+\toc
+\newpage
+\listoffigures
+%\newpage
+\listoftables
+%
+% これ以降本文
+%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%INTRO%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{overview}
+
+In \ref{futurework} I will discuss future work.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%INTRO%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Background}
+\label{background}
+
+\subsubsection{Focal Epilepsy and Existing Treatments}
+\label{epilepsy}
+Epilepsy is a common disease\cite{MWS93}.
+
+\subsubsection{Suppression of Epileptic Seizures by Focal Brain Cooling}
+\label{cooling}
+
+\subsubsection{Possible Mechanisms of Seizure Suppression by Cooling}
+\label{mecha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%INTRO%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Sato et al.'s Analysis of the Hodgkin-Huxley Model}
+\label{satohh}
+
+\subsubsection{Characterization of the Hodgkin-Huxley Model as a Dynamical System}
+\label{satodyna}
+
+\subsubsection{Frequency-Current-Temperature Curve}
+\label{satofct}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%INTRO%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Objectives}
+\label{objectives}
+
+%\begin{figure}
+%\centerline{Figure}
+%\caption{This is a figure}
+%\end{figure}
+%
+%\begin{table}
+%\centerline{Table}
+%\caption{This is a table}
+%\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Mean-Field Approximation}
+\label{meanfield}
+
+\subsection{Stochastic Leaky Integrate-and-Fire Model}
+\label{lif}
+
+\subsection{Population Equation}
+\label{pop}
+
+\subsection{Stability Analysis}
+\label{stability}
+
+\subsubsection{Derivation of the Stability Boundary}
+\label{stabformula}
+
+\subsubsection{Discretization of the Fokker-Planck Operator}
+\label{stabdiscret}
+
+\subsubsection{Results}
+\label{stabresults}
+
+\subsection{Derivation of the Equivalent Leak Time Constant*}
+\label{poptau}
+
+\subsection{Population Frequency-Current-Temperature Curve*}
+\label{popfct}
+
+\subsection{Temperature Dependence of Global Oscillation Frequency*}
+\label{poposc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Numerical Simulation using Hodgkin-Huxley Neurons}
+\label{simulation}
+
+\subsection{Network Model}
+\label{simmodel}
+
+\subsection{Model Parameters}
+\label{simparams}
+
+\subsection{Results}
+\label{simresults}
+
+\subsubsection{Termination of Oscillatory Activity with Cooling}
+\label{simstop}
+
+\subsubsection{Network Frequency-Temperature Curve}
+\label{simft}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Discussion}
+\label{discussion}
+
+\subsection{Comparison of Mean-Field and Network Models}
+\label{compmodels}
+
+Discuss their different results and the possible effects of simplifying assumptions.
+
+\subsection{Comparison with Behavioral Data}
+\label{compexp}
+
+Discuss the similarity or differences of population IFT curve with seizure frequency data.
+
+\subsection{Role of Ion Channel Kinetics in Cortical Seizure Termination}
+\label{roleion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Conclusions and Future Work}
+\label{futurework}
+
+This is the future.
+
+%
+% 謝辞
+%
+\acknowledgements
+Thank you all over the world.
+
+%
+% 参考文献
+% ここでは \reference を使って、自分でリストを作るか、BibTeX を使って
+% リストをつくって下さい。この例では BibTeX を作るような形式になってい
+% ます。
+%
+\newpage
+\reference
+%\bibliography{bunken}
+%\bibliographystyle{plain}
+%
+% 付録
+%
+\appendix
+
+%\section{おまけその１}
+%\label{omake1}
+
+\end{document}
+
