@@ -1,0 +1,358 @@
+%\documentstyle[naist-jmthesis,12pt]{jarticle}   % 日本語(Japanese thesis)
+\documentstyle[naist-mthesis,12pt]{article}    % 英語(English thesis)
+%
+% ページスタイルの指定
+%
+\pagestyle{final}       % 清書
+%\pagestyle{draft}      % 下書き
+%
+% 使用言語の指定
+%
+%\lang{Japanese} % 日本語
+\lang{English} % 英語
+%
+% 学生番号
+%
+\studentnumber{1251114}
+%
+% 修士論文 か 課題研究 かの選択
+%
+\doctitle{\mastersthesis}       % 修士論文
+%\doctitle{\mastersreport}      % 課題研究
+%
+% 取得予定の修士号は 修士(工学) か 修士(理学) か ？
+%
+\major{\engineering}    % 工学
+%\major{\science}       % 理学
+%
+% 日本語題目 (in LaTeX)
+%
+\title{Hodgkin-Huxley型神経細胞ネットワークにおける\\
+てんかん様同期活動の温度依存性}
+%
+% 日本語題目 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は指定する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\ptitle{Hodgkin-Huxley型神経細胞ネットワークにおける\\
+てんかん様同期活動の温度依存性}
+%
+% 英語題目 (in LaTeX)
+%
+\etitle{Temperature Dependence of Synchronous Epileptiform Activity in a \\
+Hodgkin-Huxley Neural Network}
+%
+% 英語題目 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は指定する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\eptitle{Temperature Dependence of Synchronous Epileptiform Activity in a \\
+Hodgkin-Huxley Neural Network}
+%
+% 日本語氏名 (in LaTeX)
+%   （姓と名の間に空白を入れて下さい）
+%
+\author{山村 頼子}
+%
+% 日本語氏名 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は指定する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\pauthor{}
+%
+% 欧文氏名 (in LaTeX)
+%   （first name, last name の順に記入し、先頭文字のみを大文字にする。）
+%
+\eauthor{Yoriko Yamamura}
+% 別の例: \eauthor{Kurt G\"{o}del}
+%
+%
+% 欧文氏名 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は指定する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\epauthor{}
+% 別の例: \peauthor{Kurt Goedel}
+%
+%
+% 論文提出年月日
+%
+\syear{2014}
+\smonth{2}
+\sday{6}
+%
+% 専攻の選択
+%
+%\department{\infproc}  % 情報処理学
+%\department{\infsys}    % 情報システム学
+%\department{\bioinf}   % 情報生命科学
+\department{\infsci}    % 情報科学
+%
+%
+% 審査委員（日本語）
+%   （姓と名、名と称号の間に空白を入れて下さい）
+%
+%５人以上の場合，５人目以降は\addcmembers を使って宣言する。
+%最大で合わせて８人まで宣言可能。
+%主指導教員、副指導教員を明記する。両指導教員以外は委員。
+%学外審査委員は、大学名を明記する
+%
+% ４人の場合
+\cmembers{池田 和司 教授}{（主指導教員）}
+         {笠原　正治 教授}{（副指導教員）}
+         {久保　孝富 助教授}{（副指導教員）}
+         {川人　光男 教授}{（副指導教員）}
+
+%
+% 審査委員（英語）
+%     （first name, last name の順に記入し、先頭文字のみを大文字にする。
+%       first name と last name の間に空白、
+%       last name と 称号の間にカンマと空白を入れて下さい。）
+%
+% ５人以上の場合，５人目以降は\eaddcmembers を使って宣言する
+% Supervisor, Co-supervisor, and Member must be specified.
+% ４人の場合
+\ecmembers{Professor Kazushi Ikeda}{(Supervisor)}
+          {Professor Shoji Kasahara}{(Co-supervisor)}
+          {Assistant Professor Takatomi Kubo}{(Co-supervisor)}
+          {Professor Mitsuo Kawato}{(Co-supervisor)}
+%
+%
+%
+% キーワード５～６個 (in LaTeX)
+%
+\keywords{てんかん, 温度, Hodgkin-Huxleyモデル, シミュレーション}
+%
+% キーワード５～６個 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は記入する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\pkeywords{}
+%
+% 5 or 6 Keywords (in LaTeX)
+%
+\ekeywords{epilepsy, temperature, Hodgkin-Huxley model, simulation}
+%
+% 5 or 6 Keywords (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は記入する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\epkeywords{}
+%
+% 内容梗概 (in LaTeX)
+%
+%   注: 行の先頭が\\で始まらないようにすること。
+%
+\abstract{
+てんかん焦点の冷却により，てんかん発作が抑制可能であることは，以前より実験的に知られていた．しかし，その分子的機序や効果ー温度 間の関係には不明な点が多く残されていた．本研究では，理論的解析を行うにあたっての探索的分析として，Hodgkin-Huxley型神経細胞ネットワークを用いたシミュレーションを行った．その結果，冷却による 膜イオンチャネル開閉率の変化のみでもてんかん様同期活動が停止し得ることを示した．
+}
+%
+% 内容梗概 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は記入する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%       改行する箇所には空白行を入れる。
+%       行の先頭が\\で始まらないようにすること。
+%
+\pabstract{
+}
+%
+% Abstract (in LaTeX)
+%
+%   注: 行の先頭が\\で始まらないようにすること。
+%
+\eabstract{
+Cooling of the epileptic focus suppresses epileptic seizures. However, the molecular mechanisms involved, as well as the precise relationship between temperature and epileptic activity, are still poorly understood. In the present study, we conduct an exploratory simulation of a network of Hodgkin-Huxley neurons, to consider possibilities for further analysis using simplified models. We demonstrate that the cooling-induced change in opening rates of the membrane channel gating variables can terminate seizure-like synchronized oscillatory activity in the network.
+}
+%
+% Abstract (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は記入する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%       改行する箇所には空白行を入れる。
+%       行の先頭が\\で始まらないようにすること。
+%
+\epabstract{
+}
+%%%%%%%%%%%%%%%%%%%%%%%%% document starts here %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%
+% 表紙 および アブストラクト
+%
+\titlepage
+\cmemberspage
+\firstabstract
+\secondabstract
+%
+% 目次
+%
+\toc
+\newpage
+\listoffigures
+%\newpage
+\listoftables
+%
+% これ以降本文
+%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%INTRO%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{overview}
+Focal brain cooling is a potential method of treatment for epilepsy with many advantages over conventionally available methods. However, its mechanism of action is unknown. The focus of this thesis is to explore the possible ways in which temperature affects seizure-like cortical activity, in order to determine the features that must be included in a simplified analytical model.
+
+%%%%%%%%%%%%%%%%%%%%%%%%INTRO%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Background}
+\label{background}
+Epilepsy is a chronic neurological condition characterized by recurrent seizures. Over 1\% of the world population is estimated to be afflicted\cite{SS96}. Of these patients, approximately 20\% suffer from refractory epilepsy, i.e. they do not respond to treatment by existing anti-epileptic drugs(AEDs)\cite{SS96a}.
+
+Conventionally, refractory epilepsy has been treated with surgery, such as resection of epileptic foci and transsection of neural fiber connecting epileptic foci with other areas of the brain. However, surgery is a highly invasive procedure accompanied by risk of infections and irreversible side effects, and there is a demand for less invasive, reversible alternatives.
+
+Cooling of the epileptic focus is a promising new method for suppression of focal epileptic seizures. In an experimental study, cooling the patch of cortex around the epileptic focus to 20 $^\circ$C in an animal model reduced the frequency of occurrence of seizures to 60\% of baseline(37 $^\circ$C), and further cooling to 15 $^\circ$C reduced it to 5\% of baseline\cite{F12}. In the same study, behavioral tests of motor performance were also conducted, and it was shown that cooling of the cortex to above 15 $^\circ$C had minimal effects on normal brain function. However, the mechanism by which cooling suppresses seizures is poorly understood.
+
+Many biophysical reactions in the nervous system depend on temperature. For example, membrane ion channels generally have temperature-dependent opening rates, as characterized in the classical Hodgkin-Huxley model\cite{HH52}. Presynaptic terminals also change their release rate of neurotransmitters in response to temperature change\cite{Volgushev00}. However, the known temperature dependence of the presynaptic neurotransmitter release rate is relatively small, with its temperature coefficient $Q_{10}\approx??$, compared to $Q_{10}\approx3$ in typical Hodgkin-Huxley-type ion channels\cite{Jansen92}. A subtype of ion channels, known as temperature-activated TRP channels, show an even more drastic temperature dependence than typical Hodgkin-Huxley-type ion channels, and are found in cell membranes throughout the central nervous system\cite{TRP06}, as well as in heat or cold receptors in the peripheral nervous system. However, a recent study using TRP channel blockers failed to demonstrate their involvement in the suppression of epileptic seizures during cooling\cite{Motamedi12}. Hodgkin-Huxley-type ion channels are therefore likely candidates for the molecular mechanism that cooling acts on to suppress epileptic seizures.
+
+%%%%%%%%%%%%%%%%%%%%%%%%INTRO%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Objectives}
+\label{objectives}
+The current study is a precursor to an analytical study of a simplified population model. Our goal for this study is to find the features that must be modeled in the simplified model, through an exploration of the effects of temperature on the function of a cortical network. Using physiologically plausible parameters, we will first construct a detailed neuronal network model of mammalian cortex showing seizure-like activity. Based on \cite{NatCom12}, we will define ``seizure-like'' activity to be high-frequency($>$30 Hz), synchronized and oscillatory. Through simulations on this model, we will then investigate the following questions:
+\begin{enumerate}
+\item Can temperature dependence of ion channels alone suppress seizure-like activity during cooling?
+\item Can a network of neurons showing seizure-like activity be desynchronized by cooling?
+\item Is the transition from a state of seizure-like activity to a quiescent state gradual or discontinuous?
+\end{enumerate}
+The first question seeks to determine whether ion channel dynamics is a plausible mechanism for seizure suppression. The second and third questions pertain to the preservation of ``normal'' neural activity during cooling. It has been suggested that the preservation of normal motor function during cooling is due to the sharp dropoff of cooling below the cortical surface, with the deeper layers of cortex (layers V/VI) remaining at near-normal temperatures\cite{Fujii12}. However, if moderate cooling($\approx20^\circ$C) of seizing cortex produces asynchronous, low-frequency activity, the preservation of normal brain function can be explained as the effect of cooling alone, rather than an uneven distribution of cooling.
+
+Through this study, we should also be able to make hypotheses about the kinds of bifurcations(i.e. the qualitative changes in the dynamics of the network) that occur as temperature decreases. 
+
+%Include in second draft: reversibility of the effects of cooling
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Methods}
+\label{methods}
+
+%\begin{figure}
+%\centerline{Figure}
+%\caption{This is a figure}
+%\end{figure}
+
+%\begin{table}
+%\centerline{Table}
+%\caption{This is a table}
+%\end{table}
+
+\subsection{Network Model Description}
+\label{model}
+We constructed a model of mammalian cortex, roughly based on Bush et al.'s model of epileptiform discharges following traumatic brain injury\cite{BPM99}. Our model is a network of 500 neurons with Hodgkin-Huxley-type membrane conductances (corresponding to ion channels), coupled to one another through conductance-based synapses.
+
+There were two types, or populations, of neurons in the network: inhibitory and excitatory. The ratio of inhibitory to excitatory neurons was 1:4\cite{?}. Each inhibitory neuron and excitatory neuron consisted of 7 and 8 compartments, respectively. All compartments contained passive leakage membrane conductances. Only the compartment corresponding to the soma of each neuron contained active membrane conductances. Within each cell, the compartments were coupled through axial conductances, as shown in Figure 1. The dimensions were taken from \cite{Bush93} for the inhibitory neurons and from the layer II pyramidal neurons in \cite{BS94} for the excitatory neurons(Table 1).
+
+The neurons were randomly interconnected, with each neuron receiving synaptic input from exactly 1/10 of each population of neurons (i.e. 10 inhibitory inputs and 40 excitatory inputs). No spatial relationship between the neurons was taken into account. In addition to this recurrent input, 1/10 of each population of neurons received excitatory input from an extrinsic source that produced a single pulse at 50 ms after the start of the simulation.
+%Explain the synapse types?
+
+The weights of the synaptic inputs were randomly assigned according to normal distributions specific to each type of synapse(Table 2). Extrinsic input weights were also normally distributed. The weights on some of the synaptic inputs were modulated to create seizure-like synchronized oscillatory activity, as described in \ref{epi}.
+
+The model can be concisely expressed in the following equations. First, the membrane voltage $V^j$ of compartment $j$ in the network obeys the ordinary differential equation
+$$ C {dV^j}/{dt} = I^j_{memb} + I^j_{ax} + I^j_{syn}, $$
+where $C$ is the membrane capacitance, and $I^j_{memb}$, $I^j_{ax}$ and $I^j_{syn}$ are the membrane, axial and synaptic currents into this compartment, respectively.
+
+For a somatic compartment, $I^j_{memb}$ consists of the typical Hodgkin-Huxley ion currents, i.e.
+$$I^j_{memb} = g_L (E_L - V^j) + g_{Na} m^3 h (E_{Na} - V^j) + g_K n^4 (E_K - V^j),$$
+where $E_L$, $E_{Na}$ and $E_K$ are the reversal potentials for the leakage current and each ion species, $g_L$ is the fixed leakage conductance, $g_{Na}$ and $g_K$ are the maximum conductances for the ion channels, and m, h and n are voltage-dependent gating variables, described in 2.3. For the dendritic compartments, $I^j_{memb}$ lacked the sodium and potassium ion currents.
+
+$I^j_{ax}$ and $I^j_{syn}$ are simply sums of currents from all neighboring compartments and incoming synaptic connections, respectively. The axial current from compartment $k$ to compartment $j$ is given by $I^{j,k}_{ax} = \gamma^{k,j}(V^j-V^k)$, where $\gamma^{k,j}$ is the axial conductance between compartment $k$ and $j$. The synaptic current from neuron $i$ to neuron $h$ is given by $I^{i,h}_{syn} = g_{syn}^{i,h}(V^i-E_{syn})$, where $g_{syn}^{i,h}$ is the conductance of the postsynaptic ion channel, which changes according to an alpha function in response to the arrival of an action potential at the synapse, and $E_{syn}$ is the reversal potential of the ion species used by the channel (calcium in this case).
+%At which compartments did the neurons receive synaptic input?
+%What is the size of EPSP?
+
+\subsection{Modeling Seizure-like Activity}
+\label{epi}
+
+\subsection{Modeling Temperature Dependence}
+\label{temp}
+
+%\subsection{Exploration of Model Parameters}
+%\label{params}
+%Include in second draft!
+
+\subsection{Numerical Integration Methods}
+\label{integration}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Results}
+\label{results}
+
+\subsection{Network Response to Cooling}
+\label{response}
+
+%\subsection{Effects of Changing Parameters}
+%\label{otherparams}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Discussion}
+\label{discussion}
+
+\subsection{Comparison with Behavioral Data}
+\label{behavioral}
+
+Discuss the similarity or differences of population IFT curve with seizure frequency data.
+
+\subsection{Comparison with Results from Analytical Models}
+\label{analytical}
+
+\subsection{Possible Methods of Model Simplification}
+\label{simplify}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Conclusions}
+\label{conclusions}
+
+
+%
+% 謝辞
+%
+%\acknowledgements
+%First and foremost, I would like to express my most heartfelt gratitude toward Ikeda-sensei and Kubo-sensei for their guidance, support and seemingly boundless patience. I also thank Yamakawa-sensei at Shizuoka University for giving me the opportunity to work on this project, and Fujii-sensei, Inoue-sensei and Maruta-sensei at Yamaguchi University for the experimental data. I am indebted to all current and former members of the Mathematical Informatics Lab for the helpful discussions during our seminars, as well as for the encouragement and inspiration they have provided over the past two years. On a more personal note, I thank Tosif Ahamed for keeping me on my trail, and keeping me going. Had it not been for you, I could be wandering through some distant land right now, with no Master's degree on the horizon. %Actually, that doesn't sound too bad.
+
+%
+% 参考文献
+% ここでは \reference を使って、自分でリストを作るか、BibTeX を使って
+% リストをつくって下さい。この例では BibTeX を作るような形式になってい
+% ます。
+%
+\newpage
+\reference
+%\bibliography{bunken}
+%\bibliographystyle{plain}
+%
+% 付録
+%
+\appendix
+
+%\section{おまけその１}
+%\label{omake1}
+
+\end{document}
+
