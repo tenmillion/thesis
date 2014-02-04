@@ -1,0 +1,489 @@
+\documentclass[12pt]{article}
+\usepackage{naist-mthesis}
+\usepackage{graphicx}
+\usepackage{lscape}
+%\documentstyle[naist-jmthesis,12pt]{jarticle}   % 日本語(Japanese thesis)
+%\documentstyle[naist-mthesis,12pt]{article}    % 英語(English thesis)
+\input{psfig}
+%
+% ページスタイルの指定
+%
+\pagestyle{final}       % 清書
+%\pagestyle{draft}      % 下書き
+%
+% 使用言語の指定
+%
+%\lang{Japanese} % 日本語
+\lang{English} % 英語
+%
+% 学生番号
+%
+\studentnumber{1251114}
+%
+% 修士論文 か 課題研究 かの選択
+%
+\doctitle{\mastersthesis}       % 修士論文
+%\doctitle{\mastersreport}      % 課題研究
+%
+% 取得予定の修士号は 修士(工学) か 修士(理学) か ？
+%
+\major{\engineering}    % 工学
+%\major{\science}       % 理学
+%
+% 日本語題目 (in LaTeX)
+%
+\title{Hodgkin-Huxley型神経細胞ネットワークにおける\\
+てんかん様同期活動の温度依存性}
+%
+% 日本語題目 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は指定する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\ptitle{Hodgkin-Huxley型神経細胞ネットワークにおける\\
+てんかん様同期活動の温度依存性}
+%
+% 英語題目 (in LaTeX)
+%
+\etitle{Temperature Dependence of Synchronous Epileptiform Activity in a \\
+Network of Hodgkin-Huxley Neurons}
+%
+% 英語題目 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は指定する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\eptitle{Temperature Dependence of Synchronous Epileptiform Activity in a \\
+Network of Hodgkin-Huxley Neurons}
+%
+% 日本語氏名 (in LaTeX)
+%   （姓と名の間に空白を入れて下さい）
+%
+\author{山村 頼子}
+%
+% 日本語氏名 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は指定する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\pauthor{}
+%
+% 欧文氏名 (in LaTeX)
+%   （first name, last name の順に記入し、先頭文字のみを大文字にする。）
+%
+\eauthor{Yoriko Yamamura}
+% 別の例: \eauthor{Kurt G\"{o}del}
+%
+%
+% 欧文氏名 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は指定する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\epauthor{}
+% 別の例: \peauthor{Kurt Goedel}
+%
+%
+% 論文提出年月日
+%
+\syear{2014}
+\smonth{2}
+\sday{6}
+%
+% 専攻の選択
+%
+%\department{\infproc}  % 情報処理学
+%\department{\infsys}    % 情報システム学
+%\department{\bioinf}   % 情報生命科学
+\department{\infsci}    % 情報科学
+%
+%
+% 審査委員（日本語）
+%   （姓と名、名と称号の間に空白を入れて下さい）
+%
+%５人以上の場合，５人目以降は\addcmembers を使って宣言する。
+%最大で合わせて８人まで宣言可能。
+%主指導教員、副指導教員を明記する。両指導教員以外は委員。
+%学外審査委員は、大学名を明記する
+%
+% ４人の場合
+\cmembers{池田 和司 教授}{（主指導教員）}
+         {笠原　正治 教授}{（副指導教員）}
+         {久保　孝富 助教授}{（副指導教員）}
+         {川人　光男 教授}{（副指導教員）}
+\addcmembers{山川　俊貴 静岡大学助教授}{（委員）}
+{}{}{}{}{}{}
+%
+% 審査委員（英語）
+%     （first name, last name の順に記入し、先頭文字のみを大文字にする。
+%       first name と last name の間に空白、
+%       last name と 称号の間にカンマと空白を入れて下さい。）
+%
+% ５人以上の場合，５人目以降は\eaddcmembers を使って宣言する
+% Supervisor, Co-supervisor, and Member must be specified.
+% ４人の場合
+\ecmembers{Kazushi Ikeda, Professor}{(Supervisor)}
+          {Shoji Kasahara, Professor}{(Co-supervisor)}
+          {Takatomi Kubo, Assistant Professor}{(Co-supervisor)}
+          {Mitsuo Kawato, Professor}{(Co-supervisor)}
+\eaddcmembers{Toshitaka Yamakawa, Assistant Professor (Shizuoka U.)}{(Member)}{}{}{}{}{}{}
+%
+%
+%
+% キーワード５～６個 (in LaTeX)
+%
+\keywords{てんかん, 温度, Hodgkin-Huxleyモデル, シミュレーション}
+%
+% キーワード５～６個 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は記入する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\pkeywords{}
+%
+% 5 or 6 Keywords (in LaTeX)
+%
+\ekeywords{epilepsy, temperature, Hodgkin-Huxley model, simulation}
+%
+% 5 or 6 Keywords (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は記入する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%
+\epkeywords{}
+%
+% 内容梗概 (in LaTeX)
+%
+%   注: 行の先頭が\\で始まらないようにすること。
+%
+\abstract{
+てんかん焦点の冷却により，てんかん発作が抑制可能であることは，以前より実験的に知られていた．しかし，その分子的機序や効果-温度間の関係には不明な点が多く残されていた．本研究では，理論的解析を行うにあたっての探索的分析として，Hodgkin-Huxley型神経細胞ネットワークを用いたシミュレーションを行った．その結果，冷却による膜イオンチャネル開閉率の変化のみでも同期振動が停止し得ることを示した．
+}
+%
+% 内容梗概 (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は記入する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%       改行する箇所には空白行を入れる。
+%       行の先頭が\\で始まらないようにすること。
+%
+\pabstract{
+}
+%
+% Abstract (in LaTeX)
+%
+%   注: 行の先頭が\\で始まらないようにすること。
+%
+\eabstract{
+Cooling of the epileptic focus suppresses epileptic seizures. However, the molecular mechanisms involved, as well as the precise relationship between temperature and epileptic activity, are still poorly understood. To consider possibilities for further analysis using simplified models, we conduct an exploratory simulation of a network of Hodgkin-Huxley neurons. We demonstrate that the cooling-induced change in the dynamics of the membrane channels can terminate synchronized oscillatory activity in the network.
+}
+%
+% Abstract (in plain text)
+%
+%   注: (in LaTeX)と同じ場合は記入する必要なし。
+%       この情報は修士論文/課題研究には現れませんが、管理のために必要です。
+%       改行する箇所には空白行を入れる。
+%       行の先頭が\\で始まらないようにすること。
+%
+\epabstract{
+}
+%%%%%%%%%%%%%%%%%%%%%%%%% document starts here %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%
+% 表紙 および アブストラクト
+%
+\titlepage
+\cmemberspage
+\firstabstract
+\secondabstract
+%
+% 目次
+%
+\toc
+\newpage
+\listoffigures
+%\newpage
+\listoftables
+%
+% これ以降本文
+%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%INTRO%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overview}
+\label{overview}
+Focal brain cooling is a potential method of treatment for epilepsy with many advantages over conventionally available methods, but the mechanism by which it suppresses seizures is unknown. The focus of this thesis is to explore the possible ways in which temperature affects epileptiform cortical activity, in order to determine the features that must be included in a simplified analytical model.
+
+%%%%%%%%%%%%%%%%%%%%%%%%INTRO%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Background}
+\label{background}
+ Epilepsy is a chronic neurological disorder characterized by recurrent seizures. Over 1\% of the world population is estimated to be afflicted\cite{Sander1996}. Of these patients, approximately 20\% suffer from refractory epilepsy, i.e. they do not respond to treatment by existing anti-epileptic drugs (AEDs)\cite{Shorvon1996}.
+
+Conventionally, refractory epilepsy has been treated with surgery, such as resection of epileptic foci and transsection of neural fiber connecting epileptic foci with other areas of the brain. However, surgery is a highly invasive procedure accompanied by risk of infection and irreversible side effects, and there is a demand for less invasive, reversible alternatives.
+
+Cooling of the epileptic focus is a promising new method for suppression of focal epileptic seizures, combining high efficacy and reversibility with low invasiveness. In an animal model of focal epilepsy, cooling the patch of cortex around an epileptic focus to 20$^\circ$C reduced the frequency of occurrence of seizures to 60\% of baseline (37$^\circ$C), and further cooling to 15$^\circ$C reduced it to 5\% of baseline\cite{Fujii2012}. Cooling of the cortex to as low as 0$^\circ$C for 1 hour leaves no histological damage in the tissue\cite{Oku2009}, and behavioral tests of motor performance during cooling of motor areas have shown that cooling of the cortex to as low as 15$^\circ$C has minimal effects on normal brain function\cite{Fujii2012}. Furthermore, compact cooling devices that can be embedded intracranially to minimize risk of infection are currently in development\cite{Fujii2012,Rothman2005}. Despite these recent advances in research toward the clinical application of brain cooling, the mechanism by which cooling suppresses seizures has remained poorly understood.
+
+We may assume that cooling of the brain acts on seizures through some temperature-dependent process(es) in the brain. Many biophysical reactions in the nervous system depend on temperature. For example, membrane ion channels generally have temperature-dependent opening rates, as characterized in the classical Hodgkin-Huxley model\cite{Hodgkin1952}. Presynaptic terminals also change their release rate of neurotransmitters in response to temperature change\cite{Volgushev2004}. However, although experimental data is still scarce, the known temperature dependence of the presynaptic neurotransmitter release rate is relatively small, with its temperature coefficient $Q_{10}$ ranging mostly around 1 with the maximum around 2, compared to $Q_{10}\approx3$ in typical Hodgkin-Huxley-type ion channels\cite{Janssen1992}. A subtype of ion channels, known as temperature-activated transient receptor potential (TRP) channels, show an even steeper temperature dependence than typical Hodgkin-Huxley-type ion channels, with the $Q_{10}$ of their opening or closing rates ranging from 9.4 to 14.8\cite{Voets2004}. They are found in cell membranes throughout the central nervous system\cite{Liapi2005}, as well as in heat or cold receptors in the peripheral nervous system. However, a recent study using TRP channel blockers failed to demonstrate their involvement in the suppression of epileptic seizures during cooling\cite{Motamedi2012}. Hodgkin-Huxley-type ion channels are therefore likely candidates for the molecular mechanism that cooling acts on to suppress epileptic seizures.
+
+%%%%%%%%%%%%%%%%%%%%%%%%INTRO%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Objectives}
+\label{objectives}
+
+The current study is a precursor to an analytical study of a simplified population model. Our goal for this study is to find the features that must be modeled in the simplified model, through an exploration of the effects of temperature on the function of a cortical network.
+
+More specifically, we will focus on the following questions:
+\begin{enumerate}
+\item At what temperature does the network stop firing continuously in response to transient input?
+\item Can a network of neurons showing synchronous activity be desynchronized by cooling?
+\item Is the transition from a state of epileptiform activity to a quiescent state continuous or discontinuous?
+\end{enumerate}
+The first question seeks to determine whether ion channel dynamics is a plausible mechanism for seizure suppression, by comparing the temperature of suppression of neural activity between simulation and experiment. The second and third questions pertain to the preservation of ``normal'' neural activity during cooling. It has been suggested that the preservation of normal motor function during cooling is due to the sharp dropoff of cooling below the cortical surface, with the deeper layers of cortex (layers V/VI) remaining at near-normal temperatures\cite{Fujii2012}. However, if moderate cooling ($\approx20^\circ$C) of seizing cortex produces asynchronous activity, the preservation of normal brain function can be explained as the effect of cooling alone, rather than an uneven distribution of cooling. Based on recent measurements of cortical local field potentials in human patients during epileptic seizures\cite{Schevon2012}, we will define ``epileptiform'' activity to be synchronized and oscillatory.
+
+To address these questions, we will construct a detailed neuronal network model of mammalian cortex showing epileptiform activity, modeling the network's temperature dependence exclusively through the gating dynamics of its membrane conductances (corresponding to ion channels). Then, we will simulate different levels of cooling on this model to investigate whether the epileptiform activity stops at lower temperatures, and to characterize the network's transition from the epileptiform state to the quiescent state.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Methods}
+\label{methods}
+
+\subsection{Overview of the Network Model}
+\label{model}
+
+A model of mammalian cortex was constructed, roughly based on Bush et al.'s model of epileptiform discharges following traumatic brain injury\cite{Bush1999}. 500 neurons with Hodgkin-Huxley-type membrane conductances (corresponding to ion channels) were coupled to one another through conductance-based synapses, to form a network, and their activity for 500 ms was simulated.
+
+
+There were two types, or subpopulations, of neurons in the network: inhibitory and excitatory. The ratio of inhibitory to excitatory neurons was 1:4, based on a measurement in cat visual cortex\cite{Gabbott1986}. Each inhibitory and excitatory neuron consisted of 7 and 8 compartments, respectively. All compartments contained passive leakage membrane conductances. Only the compartment corresponding to the soma of each neuron contained active membrane conductances. Within each cell, the compartments were coupled through axial conductances. The dimensions of the compartments were the same as those used in \cite{Bush1996} for the inhibitory neurons and the layer II pyramidal neurons in \cite{Bush1993} for the excitatory neurons.
+
+\begin{figure}[here]
+\centering
+\includegraphics[width=0.9\textwidth]{schematic.eps}
+\caption{Schematic of the network}
+\label{fig:diagram}
+\end{figure}
+
+The neurons were randomly interconnected as shown in Figure \ref{fig:diagram}, with each neuron receiving synaptic input from exactly 1/10 of each subpopulation of neurons (i.e. 10 inhibitory inputs and 40 excitatory inputs). No spatial relationship between the neurons was taken into account. In addition to this recurrent input, 1/10 of each subpopulation of neurons received excitatory input from an extrinsic source that produced a single pulse at 50 ms after the start of the simulation.
+
+The membrane voltage $V^j$ of compartment $j$ in the network obeyed the ordinary differential equation
+$$ C \frac{dV^j}{dt} = I^j_{memb} + I^j_{ax} + I^j_{syn}, $$
+where $C$ is the membrane capacitance, and $I^j_{memb}$, $I^j_{ax}$ and $I^j_{syn}$ are the membrane, axial and synaptic currents into this compartment, respectively.
+
+For a somatic compartment, $I^j_{memb}$ consisted of the typical Hodgkin-Huxley ion currents, i.e.
+$$I^j_{memb} = g_L (E_L - V^j) + \overline{g}_{Na} m^3 h (E_{Na} - V^j) + \overline{g}_K n^4 (E_K - V^j),$$
+where $E_L$, $E_{Na}$ and $E_K$ are the reversal potentials for the leakage current and each ion species, $g_L$ is the fixed leakage conductance, $\overline{g}_{Na}$ and $\overline{g}_K$ are the maximum conductances for the ion channels (Table \ref{table:membrane}), and $m$, $h$ and $n$ are voltage-\ and temperature-dependent gating variables, described in \ref{epi}. The parameters were taken from \cite{Bush1994}. For the dendritic compartments, $I^j_{memb}$ lacked the sodium and potassium ion currents.
+
+$I^j_{ax}$ was simply the sum of the currents from all neighboring compartments. The axial current from compartment $k$ to compartment $j$ is given by
+$$I^{k,j}_{ax} = \gamma (V^j-V^k),$$
+where $\gamma$ is the axial conductance between compartment $k$ and $j$, assumed constant for all $k$ and $j$.
+
+$I^j_{syn}$ was the linear weighted sum of the currents from incoming synaptic connections. The synaptic current from somatic compartment $i$ to compartment $j$ is given by 
+$$I^{i,j}_{syn} = g_{syn}^{i,j} (V^j-E_{syn}),$$
+where $g_{syn}^{i,j}$ is the conductance of the postsynaptic ion channel, and $E_{syn}$ is the reversal potential of the ion species used by the channel. In response to the arrival of an action potential at the presynaptic compartment at time $t_{AP}$, $g_{syn}^{i,j}$ changed according to the alpha function
+$$g_{syn}^{i,j}(t)=\tau_A(t-t_{AP}-D^{i,j}) \exp(1-\tau_B(t-t_{AP}-D^{i,j})),$$
+where $\tau_A$ and $\tau_B$ are the opening and closing time constants for the postsynaptic ion channel, specified for each type of synapse, and $D^{i,j}$ is the synaptic delay for synapse ($i,j$). This delay was assigned randomly to each synapse according to a normal distribution, and remained fixed for all simulations. The temperature dependence of the synaptic currents was not modeled.
+
+We included four types of synapses in our model, representing synapses gated by four different types of neurotransmitters: AMPA and NMDA, which are excitatory, and GABA$_A$ and GABA$_B$, which are inhibitory. The types of synapses differed in their time constants $\tau_A$ and $\tau_B$, and their reversal potentials $E_{syn}$ (Table \ref{table:synapse}). Excitatory neurons made AMPA synapses on inhibitory neurons, and an inhibitory neuron made either GABA$_A$ or GABA$_B$ synapses on an excitatory neuron. A synaptic connection between two excitatory neurons could be either AMPAergic or NMDAergic. All extrinsic input was AMPAergic. Synapses between inhibitory neurons were not included in the model.
+
+The weights of the synaptic inputs were randomly assigned according to normal distributions specific to each type of synapse (Table \ref{table:synapse}), with the variances set to 1/2 of the mean values.
+
+%At which compartments did the neurons receive synaptic input?
+%What is the size of EPSP?
+
+\subsection{Modeling of Epileptic Seizures}
+\label{epi}
+In our simulations, we used a model of epileptic seizures based on disinhibition\cite{Macdonald1978}. As experimental measurements of synaptic conductances giving rise to epilepsy were scarce, preliminary simulations were conducted to determine the range of $w_{GA}$ to be simulated. At 37$^\circ$C, setting the mean GABA$_A$ weight to $w_{GA}\ge4\mathrm{[nS]}$ produced only a transient response to the initial extrinsic input, with no subsequent activity. Mean values of $w_{GA}<4\mathrm{[nS]}$ produced further firing that quickly ($<150$ms) spread to the entire network, triggering sustained synchronized oscillations. Thus, we used $w_{GA}=4\mathrm{[nS]}$ as the baseline, and examined the effects of cooling on network activity at lower mean values of $w_{GA}$.
+
+\subsection{Modeling of Temperature Dependence and Cooling}
+\label{temp}
+In order to investigate whether ion channels might be responsible for the suppression of epileptic seizures during cooling, temperature dependence of neural activity in our model was modeled only through the non-post-synaptic membrane conductances. Specifically, the rate of change of the gating variables of the conductances was made to be temperature-dependent. The gating variables $m$, $h$ and $n$ evolved over time according to
+\begin{eqnarray*}
+\phi \frac{dm}{dt}= \alpha_m(V)(1-m)-\beta_m(V)m\\
+\phi \frac{dh}{dt}= \alpha_h(V)(1-h)-\beta_h(V)h\\
+\phi \frac{dn}{dt}= \alpha_n(V)(1-n)-\beta_n(V)n
+\end{eqnarray*}
+where $\alpha(V)$ and $\beta(V)$ are the voltage-dependent opening (or activation for $h$) and closing (or inactivation for $h$) rates of the gates, respectively. The time constant $\phi$ was varied over temperature according to
+$$\phi=Q_{10}^{(T-T_{exp})/10},$$
+where $Q_{10}$ is the temperature coefficient, $T$ is the temperature of the simulation, $T_{exp}$ is the temperature in the experiment through which the parameters for $\alpha(V)$ and $\beta(V)$ were obtained. Intuitively, $\phi$ decreased threefold for every 10$^{\circ}$C decrease in temperature, which in turn slowed down the transition rates of all the gating variables simultaneously.
+
+The temperature in the simulations was varied from normal body temperature (37$^\circ$C) to 10$^\circ$C in steps of 1$^\circ$C. Within each trial, temperature was kept constant throughout the simulation.
+
+%\subsection{Exploration of Model Parameters}
+%\label{explore}
+%Include in second draft!
+
+\subsection{Simulation Environment}
+\label{environment}
+
+The simulation was constructed and run on NEURON, a platform for simulation of neuonal networks best suited for physiologically detailed models. For the integration of the coupled differential equations for membrane voltage, the backward Euler method with a time step of 0.01 ms was used. This time step is sufficient to model action potentials, which occur on orders of milliseconds.
+%Mention stiff problem?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Results}
+\label{results}
+
+\subsection{Suppression of Oscillatory Activity at Lower Temperatures}
+\label{suppression}
+To explore the response of seizing cortex to cooling, we simulated the activity of a network of Hodgkin-Huxley neurons following a single transient input, at a wide range of temperatures and synaptic weight values.
+
+We found that, when the GABA$_A$ synaptic weight was set to $w_{GA}=0.6$ $\times$ baseline, which produced an epileptiform, sustained oscillation at 37$^\circ$C, no sustained oscillation was produced below 16$^\circ$C. In general, at lower temperatures, smaller values of $w_{GA}$ were needed for the same extrinsic input to trigger sustained oscillations (Figure \ref{fig:plots}).
+
+Transition from the epileptiform state to the quiescent state was abrupt; for $w_{GA}=0.6$ $\times$ baseline, the oscillation frequency dropped from about 40Hz at 17$^\circ$C to 0Hz at 16$^\circ$C. Similar results were obtained for the entire range of parameters tested (Figure \ref{fig:plots}). Furthermore, for all parameter values tested, any sustained activity was synchronous and oscillatory; no asynchronous or irregularly firing state was found.
+
+\begin{landscape}
+\begin{figure}
+\centering
+\includegraphics[width=1.5\textheight]{plots.eps}
+\caption{Network activity for the parameter values simulated}
+\label{fig:plots}
+\end{figure}
+\end{landscape}
+
+%Within the range of temperatures where oscillatory activity was observed, the frequency of the population oscillation generally decreased with temperature. However, contrary to our expectations, the decrease was non-monotonic. In particular, there was a rise in oscillation frequency from 37$^\circ$C to around 25$^\circ$C, in most of the range of $w_{GA}$ tested.
+
+\subsection{Non-Monotonic Relationship between Oscillatory Activity and Temperature}
+\label{nonmonotonic}
+Interestingly, when the simulations were run at the baseline $w_{GA}$ value, which did not produce any persistent oscillatory activity at 37$^\circ$C, oscillatory activity appeared between 24$^\circ$C and 35$^\circ$C. Simulations run at values of $w_{GA}$ above baseline revealed that there was an intermediate range of $w_{GA}$ (0.8$\times$ baseline $< w_{GA} <$ 1.6 $\times$ baseline) in which oscillations occurred only during moderate cooling (around 25$^\circ$C to 35$^\circ$C). Higher values of $w_{GA}$ suppressed oscillatory activity for all temperatures, whereas lower values of $w_{GA}$ produced oscillatory activity for all temperatures higher than the threshold where oscillations first occurred.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Discussion}
+\label{discussion}
+
+\subsection{Suppression of Epileptiform Activity During Cooling}
+\label{termination}
+
+Our goal in this study was to explore and characterize the effects of cooling on epileptiform activity in cortex. In particular, we sought to determine whether ion channels were a plausible target of action for cooling to suppress epileptic seizures. Our results indicate that cooling can indeed suppress epileptiform activity by acting only on the state transition rates of ion channels.
+
+To our surprise, we found that moderate cooling actually produced, rather than suppress, oscillatory activity at intermediate levels of inhibition. This may be due to the non-monotonous temperature-frequency curve of the Hodgkin-Huxley neuron near bifurcation \cite{Sato2012}. At intermediate levels of inhibition, between the all-firing and all-quiescent regions in parameter space, the individual neurons in the network are presumably close to their bifurcation point with respect to input current. Thus, at these parameter values, lowering the temperature may increase network activity at some temperatures.
+
+\subsection{Preservation of Normal Activity During Cooling}
+\label{normal}
+
+We were also interested in whether cooling of seizing cortex can produce states of low firing rate and asynchronous activity, such as can be seen in normal resting-state cortex. However, no such states were observed for any temperature, at least within the range of parameters we explored. This does not conflict with the hypothesis that preservation of normal activity during cooling of the cortical surface is due to the deeper layers of the cortex being kept near their normal temperature.
+
+However, it is still possible that for a set of parameters we did not try in our simulations, cooling of the seizing network to certain temperatures produces low-firing-rate, non-oscillatory and/or asynchronous output. One way in which such intermediate states may be produced is by changing the distribution of the synaptic weights. In actual cortex, synaptic weights may obey a log-normal distribution, characterized by a small number of very strong connections and a majority of very weak connections\cite{Song2005}. A recent modeling study showed that a network with a small number of strong connections (enough to trigger action potentials on their own) and a large number of weak connections can maintain low-frequency, asynchronous activity following transient input, whereas a network with the conventional all-weak connections requires sustained input in order to maintain such asynchronous firing\cite{Teramae2012}. This is because in a network with only weak connections, a large number of simultaneous inputs is required to trigger an action potential in the postsynaptic neuron, and thus any self-sustained activity must be either synchronized and oscillatory or have very high individual firing rate.
+
+\subsection{Limitations of the Current Study and Future Work}
+\label{simplify}
+ The limitations of our current model are its large degree of freedom and high complexity. With thousands of parameters and interacting variables, not only is it a challenge to evaluate the dependence of the model on the parameter values, but it is also difficult to understand in what way the change in ion channel properties gives rise to the change in network activity.
+
+A more thorough search through the parameter space is necessary. In doing so, the simulation parameters, such as the synaptic weights and the change in ion channel state transition rates over temperature, must be constrained further with experimental data. The simulation results must also be validated against recordings of population activity at different temperatures and concentrations of convulsants. Such data are scarce and must be collected through both in vitro and in vivo experiments.
+
+In addition to the opening rates of ion channels, the effects of other temperature-dependent factors, such as neurotransmitter release at presynaptic terminals, must be considered, in order to identify the factors that contribute most to seizure suppression. Including the other temperature-dependent factors may also enable low-activity states to appear at some temperatures.
+
+A simplified model would be useful for a more systematic analysis of the parameter dependence of the model. A mean-field approximation of the network (for example, \cite{Brunel2000}), in which the states of the network are reduced to the evolution of a distribution of membrane voltage over time, would allow us to analytically locate the boundaries in parameter space between the different states.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Conclusions}
+\label{conclusions}
+In the present work, we demonstrated through simulations of a network of Hodgkin-Huxley neurons that the temperature dependence of ion channels can explain the suppression of seizures by cooling.
+
+Over the entire range of temperatures and GABA$_A$ weights simulated, the network entered either an epileptiform, synchronized oscillatory state or a quiescent state in response to transient extrinsic input. While our search through parameter space was by no means exhaustive, the results lend credibility to the hypothesis that normal cortical function is preserved during cooling because the deeper layers of cortex remain uncooled, rather than because of the normal activities themselves being preserved throughout the cortex during cooling.
+
+Further work is required to rule out the possibility that these results are not specific to the parameter values used in our simulations, as well as to validate them quantitatively against experimental data.
+%
+% 謝辞
+%
+\acknowledgements
+First and foremost, I would like to express my most heartfelt gratitude toward Ikeda-sensei and Kubo-sensei for their guidance, support and seemingly boundless patience. I also thank Yamakawa-sensei at Shizuoka University, and Fujii-sensei, Inoue-sensei and Maruta-sensei at Yamaguchi University, for giving me the opportunity to work on this project. I am indebted to Shibata-sensei, Majima-san and all current and former members of the Mathematical Informatics Lab for the helpful discussions during our seminars, as well as for the encouragement and inspiration they have provided over the past two years. Finally, on a more personal note, I thank Tosif Ahamed for keeping me on my trail, and keeping me going. %Had it not been for you, I could be wandering through some distant land right now, with no Master's degree on the horizon. %Actually, that doesn't sound too bad.
+
+%
+% 参考文献
+% ここでは \reference を使って、自分でリストを作るか、BibTeX を使って
+% リストをつくって下さい。この例では BibTeX を作るような形式になってい
+% ます。
+%
+\newpage
+%\reference
+\bibliography{bibl.bib}
+\bibliographystyle{unsrt}
+
+%
+% 付録
+%
+\newpage
+\appendix
+\section{Simulation 2}
+\subsection{Introduction}
+\label{intro2}
+
+\subsection{Methods}
+\label{methods2}
+\subsubsection{Overview of Simulation 2}
+A simplified model of mammalian cortex was constructed, based on Wang and Buzs{\'a}ki's model of mammalian hippocampus\cite{Wang1996}. As this model was an abstract model omitting details specific to hippocampal cortex such as the structure of connections, and fast-spiking interneurons, the type of neuron on which their model was based, are also abundant in neocortex, we reasoned that it can be used to model neocortex without modification.
+
+Similar to Simulation 1, neurons with Hodgkin-Huxley-type membrane conductances were coupled to one another through conductance-based synapses, and their activity was simulated for 1300 msec.
+
+Simulation 2 differed from Simulation 1 on five important points. First, the neuron model (i.e. the parameters of the Hodgkin-Huxley-type equations) was changed from the Borg-Graham model\cite{Borg-Graham1987} to the Wang-Buzs{\'a}ki model\cite{Wang1996}. %Although the Borg-Graham model was also confirmed to have Class I excitability\ref{BorgGrahamClassI}(*todo),
+The Wang-Buzs{\'a}ki model was chosen because its dynamical properties had already been extensively analyzed by Sato\cite{Sato2013}.
+
+Second, the number of compartments per neuron was reduced to 1, and a spherical shape with surface area of 400 um2 (*check) was assumed for the compartment. Additional compartments can alter the phase-response characteristics of a neuron[(*to look up)], and to facilitate comparison between Sato's analysis of single cells and the results of our network simulation, this potential interference was removed.
+
+Third, the parameters of the synaptic connections were made to be identical across all synapses. Again, this was to facilitate analysis by excluding factors that explicitly introduced heterogeneity into the model.
+
+Fourth, extrinsic input to the network was modeled by a constant current of identical amplitude for all neurons, as opposed to the transient Poisson input used in Simulation 1. With persistent input, it is easier for the weakly connected network to sustain firing without synchronous firing.
+
+Finally, the number of connections per neuron was randomized, as opposed to the fixed numbers of connections used in Simulation 1. The assumption that all neurons in an actual cortical network have the same number of connections is unrealistic. Furthermore, Wang and Buzs{\'a}ki showed that a network with a constant number of connections per neuron for all neurons is much more susceptible to complete synchrony, even when the number itself is small compared to the number of targets available. In addition to making the model more realistic, we wanted to avoid this potentially synchronizing factor.
+
+
+\subsubsection{Modeling of Epileptic Seizures}
+In the inhibitory-only network, no attempt was made to explicitly model epileptic activity, in order to keep the model applicable to a wide range of etiologies of epilepsy. 
+
+In the mixed network, we studied the effect of varying the ratio between inhibitory and excitatory synaptic weights. One possible cause for epilepsy is the reduction of the efficacy of inhibitory synapses. 
+
+\subsection{Results}
+\label{results2}
+
+\subsection{Discussion}
+\label{discussion2}
+
+\subsection{Conclusions}
+\label{conclusions2}
+
+\newpage
+\setcounter{table}{0}
+\renewcommand{\thetable}{A\arabic{table}}
+\begin{table}[h]
+\begin{tabular}{lll}
+                  & Inhibitory       & Excitatory       \\
+$C$               & 2.21 $\mu$F/cm$^2$ & 2.07 $\mu$F/cm$^2$ \\
+$\gamma$       & 0.005 S/cm       & 0.005 S/cm        \\
+$g_L$             & 0.00015 S/cm$^2$ & 0.00015 S/cm$^2$  \\
+$E_L$             & -61 mV           & -71 mV        \\
+$\overline{g}_{Na}$ & 0.08 S/cm$^2$    & 0.03 S/cm$^2$    \\
+$E_{Na}$          & 45 mV            & 45 mV          \\
+$\overline{g}_K$	  & 0.09 S/cm$^2$    & 0.02 S/cm$^2$   \\
+$E_K$          	  & 45 mV            & 45 mV        
+\end{tabular}
+\caption{Parameters of membrane and membrane conductances}
+\label{table:membrane}
+\end{table}
+
+\begin{table}[h]
+\begin{tabular}{lllll}
+                  & Mean weight & $\tau_1$ & $\tau_2$ & $E_{syn}$\\
+AMPA              & 2 nS        & 1 ms     & 2 ms     & 0 mV \\
+NMDA              & 0.5 nS      & 0.25 ms  & 150 ms   & 0 mV \\
+GABA$_A$          & 4 nS        & 1 ms     & 2 ms     & -70 mV \\
+GABA$_B$          & 0.2 nS      & 62.5 ms  & 213 ms   & -90 mV 
+\end{tabular}
+\caption{Parameters of synaptic conductances}
+\label{table:synapse}
+\end{table}
+
+\end{document}
+
